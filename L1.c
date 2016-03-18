@@ -1,20 +1,41 @@
 #include <stdio.h>
 
+int pros (int n);
+
 int main ()
 {
-	int n, i;
-	
-	printf("Vvedite sheslo: ");
+	int n, zn, i;
+	printf("\nVvedite n: ");
 	scanf("%d", &n);
 	
-	printf("\nn > :");
-	for (i = n - 1; i <= n; i--) {		
-		if (i <= 0) {
-			break;
-		} else {
+	zn = pros(n);
+	if (zn == 1) {
+		printf("\nVashe 4islo prostoe.");
+	} else {
+		printf("\nVashe shislo ne prostoe.");
+	}
+	
+	printf("\nProstie 4isla < %d:", n);
+	for (i = 1; i < n; i++) {
+		zn = pros(i);
+		if (zn == 1) {
 			printf(" %d", i);
-		}
+		} else {}
 	}
 	
 	return 0;
 }
+
+int pros (int n)
+{
+	int i = 2, zalishok;
+	while (i < n) {
+		zalishok = n%i;
+		if (zalishok == 0) {
+			return 0;
+		} else {}
+		i++;
+	}
+	return 1;
+}
+
