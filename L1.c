@@ -18,9 +18,8 @@ int main ()
 	printf("\nProstie 4isla < %d:", n);
 	for (i = 1; i < n; i++) {
 		zn = pros(i);
-		if (zn == 1) {
+		if (zn == 1)
 			printf(" %d", i);
-		} else {}
 	}
 	
 	return 0;
@@ -31,9 +30,8 @@ int pros (int n)
 	int i = 2, zalishok;
 	while (i < n) {
 		zalishok = n%i;
-		if (zalishok == 0) {
+		if (zalishok == 0)
 			return 0;
-		} else {}
 		i++;
 	}
 	return 1;
